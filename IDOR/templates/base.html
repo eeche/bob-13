@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>Flask IDOR Example</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+      }
+      nav a {
+        margin-right: 15px;
+      }
+    </style>
+</head>
+<body>
+<nav>
+  <a href="{{ url_for('index') }}">Home</a>
+  {% if session.user_id %}
+    <a href="{{ url_for('logout') }}">Logout</a>
+  {% else %}
+    <a href="{{ url_for('login') }}">Login</a>
+    <a href="{{ url_for('register') }}">Register</a>
+  {% endif %}
+</nav>
+
+<hr />
+
+<!-- 여기서 block을 정의해두면, 하위 템플릿에서 재정의 -->
+{% block content %}{% endblock %}
+
+</body>
+</html>
