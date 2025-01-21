@@ -5,7 +5,7 @@ from flask import Flask, request, session, redirect, url_for, render_template
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.secret_key = "super_secret_key_for_sessions"  # 실제 프로덕션에서는 안전하게 관리
+app.secret_key = "super_secret_key_for_sessions"  # 실제 프로덕션에서는 안전하게 관리(환경변수 사용)
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "idor.db")
 
