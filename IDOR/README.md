@@ -22,6 +22,8 @@ docker run -d -p 5000:5000 --name idor_container idor_challenge
 
 이 id값은 문제의 난이도를 높이기 위해서 base64로 인코딩되어 있지만, 눈치가 빠른 사람은 금방 알아차릴 것이다.
 
+심지어 아무 값을 입력하면 친절하게 Invalid Base64-encoded ID 라고 힌트를 준다.
+
 이 id값을 적절히 바꾸면 권한이 없더라도 관리자 페이지의 profile에 접근할 수 있다.
 
 관리자 id=1로 이를 base64로 인코딩한 값은 MQ==이다.
