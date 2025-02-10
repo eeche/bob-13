@@ -15,7 +15,7 @@ private:
 
 public:
     MacAddr() {}
-    MacAddr(const uint8_t* target) { memcpy(addr, target, LENGTH); }
+    MacAddr(const uint8_t* src) { memcpy(addr, src, LENGTH); }
 
     const uint8_t* data() const { return addr; }
 
@@ -29,6 +29,13 @@ public:
     friend std::ostream& operator<<(std::ostream& os, const MacAddr& m) {
         os << (std::string)m;
         return os;
+    }
+
+    bool operator==(const MacAddr& other) const {
+        return memcmp(addr, other.addr, LENGTH) == 0;
+    }
+    bool operator!=(const MacAddr& other) const {
+        return !(*this == other);
     }
 };
 

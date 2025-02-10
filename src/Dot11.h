@@ -14,7 +14,7 @@ struct Dot11Hdr {
 };
 #pragma pack(pop)
 
-// 서브타입(Beacon=0x80)
+// Beacon subtype (리틀엔디안 0x0080)
 static const uint16_t FC_SUBTYPE_BEACON = 0x0080;
 
 #endif
