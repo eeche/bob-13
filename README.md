@@ -16,4 +16,5 @@ sample : csa-attack mon0 01:23:45:67:89:AB 01:23:45:67:89:AB
 ```
 
 ## Result
-![](./result.jpg)
+![](./result_mobile.jpg)
+![](./result_desktop.png)
