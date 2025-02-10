@@ -1,42 +1,28 @@
 #ifndef MACADDR_H
 #define MACADDR_H
 
-#include <cstdint>
-#include <cstring>
 #include <string>
+#include <sstream>
+#include <iomanip>
 #include <iostream>
 
-class MacAddr {
-public:
-    static const size_t LENGTH = 6;
+inline bool parseMac(const std::string& macStr, uint8_t mac[6]) {
+    std::istringstream iss(macStr);
+    int val;
+    char sep;
 
-private:
-    uint8_t addr[LENGTH] = {0,};
-
-public:
-    MacAddr() {}
-    MacAddr(const uint8_t* src) { memcpy(addr, src, LENGTH); }
-
-    const uint8_t* data() const { return addr; }
-
-    operator std::string() const {
-        char buf[18];
-        sprintf(buf, "%02x:%02x:%02x:%02x:%02x:%02x",
-                addr[0], addr[1], addr[2], addr[3], addr[4], addr[5]);
-        return std::string(buf);
+    for (int i = 0; i < 6; i++) {
+        if (!(iss >> std::hex >> val)) {
+            return false;
+        }
+        mac[i] = static_cast<uint8_t>(val);
+        if (i < 5) {
+            if (!(iss >> sep)) {
+                return false;
+            }
+        }
     }
+    return true;
+}
 
-    friend std::ostream& operator<<(std::ostream& os, const MacAddr& m) {
-        os << (std::string)m;
-        return os;
-    }
-
-    bool operator==(const MacAddr& other) const {
-        return memcmp(addr, other.addr, LENGTH) == 0;
-    }
-    bool operator!=(const MacAddr& other) const {
-        return !(*this == other);
-    }
-};
-
-#endif
+#endif // MACADDR_H
