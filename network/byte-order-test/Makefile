@@ -9,4 +9,3 @@ $(TARGET): main.o
 clean:
 	rm -f $(TARGET)
 	rm -f *.o
-
