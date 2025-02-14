@@ -8,6 +8,7 @@
 - Flex(token) & Bison(parser) 을 사용하여 계산기 구현
 
 ### 2. Blockchain
+- PoS, PoW 구현
 - Solidity를 활용하여 BoBToken 발행
 - pygame을 사용하여 간단한 GUI 구현
 
@@ -33,7 +34,7 @@
 ```
 bob-13
 ├── advanced-calculator 
-├── bob-token           
+├── blockchain          
 ├── chatbot             
 ├── ctf                 
 ├── e2e                 
@@ -45,7 +46,7 @@ bob-13
 
 ## 🛠️ 실행 방법
 각 디렉토리 내부의 `README.md` 파일을 참고하여 실습 환경을 설정하고 실행할 수 있습니다.  
-❗모든 파일에 `README.md` 파일이 있지 않습니다.  
+❗모든 디렉토리에 `README.md` 파일이 있지 않습니다.  
 
 ## 📌 참고 사항
 이 레포지토리는 BOB 13기 교육 과정에서 학습한 내용을 정리한 것이며, 개인적인 연구 및 실습 내용이 포함될 수 있습니다.
