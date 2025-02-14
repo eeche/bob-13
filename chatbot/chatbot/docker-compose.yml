@@ -1,0 +1,55 @@
+# version: "3.3"
+# services:
+#   mariadb:
+#     image: mariadb
+#     ports:
+#       - 3306:3306
+#     volumes:
+#       - bobip-mariadb-data:/var/lib/mysql
+#     environment:
+#       MYSQL_ROOT_PASSWORD: 1234
+#       MYSQL_DATABASE: chat_bot
+
+#   api:
+#     image: eeche/bob13:3.3
+#     ports:
+#       - 80:8080
+#     environment:
+#       DB_HOST: mariadb
+#       DB_USER: root
+#       DB_PASSWORD: 1234
+#       DB_NAME: chat_bot
+#       LOG_LVL: dev
+#       PYTHONUNBUFFERED: "1"
+#     depends_on:
+#       - mariadb
+#     command: sh -c "sleep 5 && /app/start.sh"
+
+# volumes:
+#   bobip-mariadb-data:
+
+version: "3.3"
+services:
+  mariadb:
+    image: mariadb
+    ports:
+      - 3306:3306
+    volumes:
+      - bobip-mariadb-data:/var/lib/mysql
+    env_file:
+      - .env
+
+  api:
+    image: eeche/bob13:5
+    ports:
+      - 80:8080
+    env_file:
+      - .env
+    environment:
+      PYTHONUNBUFFERED: "1"
+    depends_on:
+      - mariadb
+    command: sh -c "sleep 10 && /app/start.sh"
+
+volumes:
+  bobip-mariadb-data:

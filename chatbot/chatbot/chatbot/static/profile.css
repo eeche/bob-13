@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
+  
+  html {
+    overflow: hidden;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .header {
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+  }
+  
+  .header > ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .header > ul > li {
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+    transition: color 300ms;
+  }
+  
+  .header > ul > li:hover {
+    color: #615e5e;
+  }
+  
+  .main {
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 80px;
+  }
+  
+  .main > .profile {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 180px);
+    border: 1px solid #000;
+    margin-top: 100px;
+  }
+  
+  .main > .profile > .picture__box {
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .main > .profile > .picture__box > h2,
+  h3 {
+    margin: 10px;
+  }
+  
+  .main > .profile > .picture__box > img {
+    width: 40%;
+    height: 60%;
+    border-radius: 50%;
+    margin: 10px 0 20px 0;
+  }
+  
+  .main > .profile > .picture__box > p {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main > .profile > .info__box {
+    width: 50%;
+    height: 100%;
+    float: right;
+    display: flex;
+  }
+  
+  .main > .profile > .info__box > .img__box {
+    width: 15%;
+    height: 100%;
+  }
+  
+  .main > .profile > .info__box > .img__box > div {
+    width: 100%;
+    height: 25%;
+    border: 1px solid #000;
+  }
+  
+  .main > .profile > .info__box > .img__box > div > img {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+  
+  .main > .profile > .info__box > .my__info {
+    width: 85%;
+    height: 100%;
+  }
+  
+  .main > .profile > .info__box > .my__info > div {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding-left: 5%;
+    border: 1px solid #000;
+  }
+  
+  /* ///////////////////////////////////////////////////////// */
+  
+  .main > .career {
+    width: 100%;
+    /* height: 100%; */
+    height: calc(100vh - 180px);
+    margin: 180px auto;
+    /* background-color: aqua; */
+    border: 1px solid #000;
+    margin-top: 180px;
+  }
+  
+  .main > .career > p {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    border: 1px solid #000;
+  }
+  
+  .main > .career > .career__list {
+    display: flex;
+    border: 1px solid #000;
+  }
+  
+  .main > .career > .career__list > ul {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .main > .career > .career__list > ul > h4 {
+    font-size: 16px;
+    margin: 10px;
+  }
+  
+  .main > .career > .career__list > ul > div {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+  }
+  
+  .main > .career > .career__list > ul > div > img {
+    margin: 10px;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    animation: image 1.5s infinite linear alternate;
+  }
+  
+  @keyframes image {
+    from {
+      transform: rotateY(30deg);
+    }
+    to {
+      transform: rotateY(-30px);
+    }
+  }
+  
+  .main > .career > .career__list > ul > p {
+    margin: 10px;
+  }
+  
+  /* ///////////////////////////////////////////////////////// */
+  
+  .main > .skill {
+    width: 100%;
+    /* height: 100%; */
+    height: calc(100vh - 180px);
+    display: flex;
+    margin: 180px auto;
+    border: 1px solid #000;
+    margin-top: 180px;
+  }
+  
+  .main > .skill > #myChart {
+    width: 30vw;
+    height: 30vh;
+    margin: auto;
+  }
+  
+  /* ///////////////////////////////////////////////////////// */
+  
+  .main > .personal {
+    width: 100%;
+    height: calc(100vh - 180px);
+    text-align: center;
+    border: 1px solid #000;
+  }
+  
+  .main > .personal > .slide__page {
+    width: 960px;
+    height: 360px;
+    margin: auto;
+    transform: translate(0, 20%);
+  }
+  
+  main > .personal > .slide__page > .slide__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  main > .personal > .slide__page > .slide__wrapper > .slides {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* width: 1620px; */
+    display: flex;
+  }
+  
+  main > .personal > .slide__page > .slide__wrapper > .slides > li > img {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .slides > li:not(:last-child) {
+    float: left;
+    margin-right: 30px;
+  }
+  
+  .controls {
+    width: 100%;
+    text-align: center;
+    display: flex;
+  }
+  
+  .controls > p {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0px 10px;
+  }
+  
+  .controls > p#prev {
+    float: left;
+  }
+  
+  .controls > p#next {
+    float: right;
+  }
+  
+  /* ///////////////// footer ///////////////// */
+  
+  .footer {
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    text-align: end;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+  }
+  
+  .footer > p {
+    margin-top: 40px;
+    margin-right: 20px;
+  }
