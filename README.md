@@ -1,38 +1,46 @@
 # BOB 13기 교육 자료 및 과제 모음
 
-이 레포지토리는 **BOB 13기 교육 과정**에서 수행한 과제 및 수업 내용을 정리한 공간입니다. 각 주차별 학습 내용과 실습 결과를 포함하고 있습니다.
+이 레포지토리는 **BOB 13기 교육 과정**에서 수행한 과제 및 수업 내용을 정리한 공간입니다. 각 수업별 학습 내용과 실습 결과를 포함하고 있습니다.
 
 ## 📚 학습 내용
 
-### 1. 시스템 보안
-- **리눅스 보안 기초**: 리눅스 파일 권한 및 프로세스 관리
-- **eBPF 활용**: 시스템 콜 모니터링 및 네트워크 보안 분석
+### 1. Flex & Bison
+- Flex(token) & Bison(parser) 을 사용하여 계산기 구현
 
-### 2. 웹 보안
-- **XSS, CSRF, SQL Injection** 등의 웹 취약점 분석 및 실습
-- **CTF 문제 풀이**를 통한 웹 해킹 대응 능력 향상
+### 2. Blockchain
+- Solidity를 활용하여 BoBToken 발행
+- pygame을 사용하여 간단한 GUI 구현
 
-### 3. 네트워크 보안
-- **패킷 분석 및 트래픽 모니터링**
-- **Cilium + Hubble**을 활용한 네트워크 흐름 시각화
+### 3. CTF
+- IDOR, Pickle 기반의 웹 해킹 문제 구현
 
-### 4. 이상행위 탐지
-- **머신러닝 기반 이상 탐지 모델** 설계 및 구현
-- **시스템 콜 패턴 분석을 통한 침입 탐지**
+### 4. E2E Keypad
+- E2E Keypad FE & BE 구현
 
-### 5. 클라우드 보안
-- **Naver Cloud 보안** 연구 및 Prowler 기반 점검 자동화
-- **API 인증 및 보안 정책 적용**
+### 5. File System
+- File System 종류에 따른 parser 구현
+
+### 6. Network
+- Network 공격 실습 예제
+
+### 7. OOSD
+- Offensive Security 기초
+
+### 8. SOAR
+- TheHive Case 생성 및 Template 적용 자동화
 
 ## 📂 디렉토리 구조
 ```
-BOB-13-Repo/
-├── system-security/   # 시스템 보안 관련 과제 및 실습 코드
-├── web-security/      # 웹 보안 실습 및 CTF 문제 풀이
-├── network-security/  # 네트워크 보안 및 패킷 분석 자료
-├── anomaly-detection/ # 이상 탐지 관련 연구 및 실습
-├── cloud-security/    # 클라우드 보안 연구 및 Prowler 적용 사례
-└── README.md          # 현재 문서
+bob-13
+├── advanced-calculator 
+├── bob-token           
+├── chatbot             
+├── ctf                 
+├── e2e                 
+├── filesystem          
+├── network
+├── oosd       
+└── thehive             
 ```
 
 ## 🛠️ 실행 방법
@@ -40,5 +48,3 @@ BOB-13-Repo/
 
 ## 📌 참고 사항
 이 레포지토리는 BOB 13기 교육 과정에서 학습한 내용을 정리한 것이며, 개인적인 연구 및 실습 내용이 포함될 수 있습니다.
-
----
