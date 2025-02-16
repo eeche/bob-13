@@ -1,7 +1,7 @@
 #include <pcap.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "pcap-test.h"
+#include "pcap_test.h"
 #include <stdint.h>
 
 void usage() {
@@ -35,7 +35,6 @@ void eth_header(const uint8_t* packet) {
 		return;
 	}
 
-	printf("----------------------------\n");
 	printf("---ethernet header---\n");
 	printf("src mac: ");
 	for (int i = 0; i < 6; i++) {
@@ -89,6 +88,7 @@ void payload(const uint8_t* packet) {
 		if (i == 9) printf("\n");
 	}
 	printf("\n");
+	printf("----------------------------\n");
 }
 
 int main(int argc, char* argv[]) {

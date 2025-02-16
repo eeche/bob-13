@@ -1,3 +1,5 @@
+#ifndef PCAP_TEST_H
+#define PCAP_TEST_H
 // 1. Ethernet Header의 src mac / dst mac
 // 2. IP Header의 src ip / dst ip
 // 3. TCP Header의 src port / dst port
@@ -37,3 +39,10 @@ struct tcp_header {
 struct payload {
     uint8_t data[20];
 };
+
+void eth_header(const uint8_t* packet);
+void ipv4_header(const uint8_t* packet);
+void tcp_header(const uint8_t* packet);
+void payload(const uint8_t* packet);
+
+#endif
